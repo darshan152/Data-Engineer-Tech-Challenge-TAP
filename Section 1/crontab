@@ -1,0 +1,2 @@
+# Run pipeline script every day at 1am
+0 1 * * * /usr/bin/python3 '/home/Darshan/Data-Engineer-Tech-Challenge-TAP/Section 5/Pipeline.py'

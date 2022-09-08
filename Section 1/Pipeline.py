@@ -1,8 +1,7 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime
-import pycron
-import time
+
 
 def process():
     ## Read in data as a dataframe
@@ -29,10 +28,4 @@ def process():
     curr_timestamp = str(datetime.now().date())
     data[["first_name","last_name","price","above_100"]].to_csv(f"dataset_processed_{curr_timestamp}.csv", index = False)
 
-while True:
-    if pycron.is_now('0 1 * * *'):
-        print('processing')
-        process()
-        time.sleep(60)
-    else:
-        time.sleep(60) 
+process()
