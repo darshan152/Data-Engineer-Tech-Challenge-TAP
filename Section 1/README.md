@@ -13,5 +13,7 @@ The python script will transform the data according to the requirements below:
 * Delete any rows which do not have a name
 * Create a new field named above_100, which is true if the price is strictly greater than 100
 
+The script will then generate the processed dataset with the date appended.
+
 The crontab file specifies the configuration for the cron job. 
 Please change the directory of the Python installation to suit your installation and change the directory of the python script appropriately as well.
