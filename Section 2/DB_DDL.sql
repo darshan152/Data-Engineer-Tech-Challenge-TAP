@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS salespersons (
 CREATE TABLE IF NOT EXISTS transactions (
     transaction_n INT PRIMARY KEY,
     salesperson_id INT REFERENCES salespersons(id),
-    car_serial_n VARCHAR(64) REFERENCES cars(serial_n),
+    car_serial_n INT REFERENCES cars(serial_n),
     timestamp TIMESTAMP,
     cust_phone_n VARCHAR(64) REFERENCES customers(phone_n)
 );
